@@ -1,3 +1,14 @@
+/* 表 */
+th,td {
+    border: solid 1px;              /* 枠線指定 */
+}
+
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+}
+
+
+
 /* 株の詳細モーダル */
 .stock-detail-modal {
     display: none !important;
