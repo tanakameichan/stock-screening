@@ -1,3 +1,11 @@
+h3 {
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+}
+
 /* 表 */
 th, td {
     border: 1px solid #ccc;
@@ -15,6 +23,20 @@ table {
     border-collapse:  collapse;     /* セルの線を重ねる */
 }
 
+.kome-list {
+  list-style: none; /* デフォルトの黒丸を消す */
+  padding-left: 0;   /* 左側の余白をリセット */
+}
+
+.kome-list li {
+  position: relative;
+  padding-left: 1.2em;   /* ① ※の分だけ左側に余白を作る */
+  text-indent: -1.2em;   /* ② 1行目だけを左に引っ張り出す */
+}
+
+.kome-list li::before {
+  content: "※ ";    /* 文字の前に※を表示 */
+}
 
 
 /* 株の詳細モーダル */
