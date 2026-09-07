@@ -1,6 +1,14 @@
 /* 表 */
-th,td {
-    border: solid 1px;              /* 枠線指定 */
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;   /* 上揃え */
+    line-height: 1.5;      /* 行間を少し広げる */
+}
+
+th {
+    background: #eee;
+    white-space: nowrap;
 }
 
 table {
