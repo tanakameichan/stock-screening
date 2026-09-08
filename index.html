@@ -9,53 +9,94 @@
              gtag('js', new Date());
               gtag('config', 'G-6KTKNVVX2C');
             </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KTKNVVX2C"></script>
+            <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+              gtag('config', 'G-6KTKNVVX2C');
+            </script>
+            
     <title>株検索ツール簡易版</title>
     <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../css_js/style.css" type="text/css">
 </head>
 
 <body>
-<div id="stock-search">
-  <h3>株検索ツール簡易版（26/09/07更新）</h3>
 
-  <div>
-    <label>
-      株価：
-      <input type="number" id="maxPrice" value="5000" step="100">
-      円以下
-    </label>
-  </div>
+<header>
+    <div class="container">
+        <h1>たなかさん家の株式スクリーニングツール</h1>
+    </div>
+</header>
 
-  <div>
-    <label>
-      配当利回り：
-      <input type="number" id="minDividend" value="3" step="0.1">
-      %以上
-    </label>
-  </div>
 
-  <div>
-    <label>
-      PER：
-      <input type="number" id="maxPER" value="15" step="0.1">
-      以下
-    </label>
-  </div>
+<div  class="container">
+    <div id="stock-search">
+      <h3>株検索ツール簡易版（26/09/07更新）</h3>
 
-  <div>
-    <label>
-      PBR：
-      <input type="number" id="maxPBR" value="1" step="0.1">
-      以下
-    </label>
-  </div>
+      <div>
+        <label>
+          株価：
+          <input type="number" id="maxPrice" value="5000" step="100">
+          円以下
+        </label>
+      </div>
 
-  <br>
+      <div>
+        <label>
+          配当利回り：
+          <input type="number" id="minDividend" value="3" step="0.1">
+          %以上
+        </label>
+      </div>
 
-  <button id="searchButton" onclick="searchStocks()" disabled>読み込み中...</button>
+      <div>
+        <label>
+          PER：
+          <input type="number" id="maxPER" value="15" step="0.1">
+          以下
+        </label>
+      </div>
 
-  <div id="result"></div>
+      <div>
+        <label>
+          PBR：
+          <input type="number" id="maxPBR" value="1" step="0.1">
+          以下
+        </label>
+      </div>
+
+      <br>
+
+      <button id="searchButton" onclick="searchStocks()" disabled>読み込み中...</button>
+
+      <div id="result"></div>
+
+        <p>
+            検索結果は投資判断を保証するものではありません。<br>
+            実際に投資を行う場合は、企業の業績や財務状況、<br>
+            最新のニュースなども確認したうえで、ご自身で判断してください。
+        </p>
+
+    </div>
 </div>
+
+
+<footer>
+    <div class="container">
+        <p>株式スクリーニングツール</p>
+        <p>
+            <a href="./about.html">運営者情報</a> |
+            <a href="./privacy.html">プライバシーポリシー</a>
+        </p>
+        <p>
+            ※当サイトに掲載されている情報は投資助言を目的としたものではありません。
+        </p>
+    </div>
+</footer>
+
 </body>
 <script>
 // 今回のCSV形式（全体が"..."で囲まれた1行）に最適化したパース処理
