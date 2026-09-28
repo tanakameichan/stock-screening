@@ -19,29 +19,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="javascriptで株価を検索する簡易版です">
+          content="株価、配当利回り、PER、PBRなどの条件を指定して、株初心者が自分で調べる候補銘柄を絞り込める株式スクリーニングツールです。">
 <!-- OGP設定（SNS・X/Twitterシェア用） -->
-    <meta property="og:site_name" content="高配当株・割安株 スクリーニングデータベース">
-    <meta property="og:title" content="高配当株・割安株 スクリーニングデータベース">
-    <meta property="og:description" content="独自指標で厳選した割安高配当株の一覧。リスク分析や評価理由をわかりやすくまとめています。">
+    <meta property="og:site_name" content="たなかさん家の初心者向け株式スクリーニングツール">
+    <meta property="og:title" content="たなかさん家の初心者向け株式スクリーニングツール">
+    <meta property="og:description" content="株初心者が日本株を探す際の候補探しを目的とした株式スクリーニングツールです。株価、配当利回り、PER、PBRなどの条件から銘柄を絞り込めます。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tanakameichan.github.io/">
+    <meta property="og:url" content="https://tanakameichan.github.io/stock-screening/">
   
     <!-- Twitter (X) カード -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="高配当株・割安株 スクリーニングデータベース">
-    <meta name="twitter:description" content="独自指標で厳選した割安高配当株の一覧。リスク分析や評価理由をわかりやすくまとめています。">
-
+    <meta name="twitter:title" content="たなかさん家の初心者向け株式スクリーニングツール">
+    <meta name="twitter:description" content="株初心者が日本株を探す際の候補探しを目的とした株式スクリーニングツールです。株価、配当利回り、PER、PBRなどの条件から銘柄を絞り込めます。">
+    
     <link rel="stylesheet" href="../css_js/style.css" type="text/css">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <script src="../css_js/common.js"></script>
+    
+</head>
 
 <body>
-
 <header id="header"></header>    <!-- ヘッダーリンク -->
-
-
-
 
 <main class="container">
 
@@ -113,28 +111,28 @@
     <!-- スクリーニングツールの解説・活用ガイド（AdSense対策・SEO用） -->
     <section class="tool-guide" style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; line-height: 1.8;">
       <h2 style="font-size: 1.4rem; color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 0;">当スクリーニングツールの活用ガイドと指標の見方</h2>
-      <p style="font-size: 0.95rem; color: #334155;">当ツールは、株式市場に上場する銘柄の中から「割安感」と「高い配当利回り」を兼ね備えた銘柄を効率よく探すためのデータベースです。掲載されている主な財務指標の見方と、投資判断における活用ポイントを解説します。</p>
+      <p style="font-size: 0.95rem; color: #334155;">当ツールは、株価、配当利回り、PER、PBRなどの条件を指定して、多くの銘柄の中から自分で調べる候補を絞り込むためのツールです。ここでは、検索に使用している主な財務指標の意味と、銘柄を調べる際に確認しておきたいポイントを解説します。</p>
 
       <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. 配当利回り（%）</h3>
       <p style="font-size: 0.95rem; color: #334155;">1株あたりの年間予想配当金を、現在の株価で割って算出される指標です。数値が高いほど、投資額に対して多くの配当を受け取ることができます。</p>
       <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-        <li><strong>活用の視点:</strong> 一般的に3.5%〜4.0%以上が高配当銘柄の目安とされます。ただし、業績悪化によって株価が急落した結果、一時的に利回りが高く見えている「配当トラップ」には注意が必要です。配当性向や過去の増配傾向も合わせて確認することが重要です。</li>
+        <li><strong>活用の視点:</strong>配当利回りが高い銘柄を探す場合に利用できます。ただし、利回りが高いという理由だけで判断するのではなく、業績や配当性向、過去の配当推移なども確認することが重要です。</li>
       </ul>
 
       <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. PER（株価収益率）</h3>
       <p style="font-size: 0.95rem; color: #334155;">現在の株価が「1株あたりの純利益（EPS）」の何倍まで買われているかを示す指標です。企業の「稼ぐ力」に対して株価が割安か割高かを測ります。</p>
       <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-        <li><strong>活用の視点:</strong> 日本市場の全銘柄平均はおよそ15倍前後が目安となります。15倍を下回る銘柄は割安と判断されますが、成長性が低い業種では慢性的にPERが低く放置されるケースもあるため、同業他社との比較が有効です。</li>
+        <li><strong>活用の視点:</strong>PERが低い銘柄を探す際に利用できます。ただし、PERだけで割安・割高を判断することはできないため、同業他社との比較や、企業の業績・成長性なども確認する必要があります。</li>
       </ul>
 
       <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. PBR（株価純資産倍率）</h3>
       <p style="font-size: 0.95rem; color: #334155;">現在の株価が「1株あたりの純資産（BPS）」の何倍かを示す指標です。会社が解散した場合に株主に残る価値（解散価値）に対して、株価がどう評価されているかを表します。</p>
       <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-        <li><strong>活用の視点:</strong> PBR 1.0倍が解散価値と同等とされ、1.0倍を割れると底値圏（割安）とみなされます。近年は東京証券取引所による「PBR1倍割れ改善要請」もあり、自社株買いや増配などの株主還元姿勢を強める企業が増加しています。</li>
+        <li><strong>活用の視点:</strong>PBRが1倍を下回る銘柄を候補として探す際に利用できます。ただし、PBRが低いことだけで割安と判断せず、企業の収益性や財務状況なども確認することが重要です。</li>
       </ul>
 
       <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. 効率的なスクリーニングのコツ</h3>
-      <p style="font-size: 0.95rem; color: #334155;">単一の指標だけで判断せず、「配当利回り 3.5%以上 × PER 15倍以下 × PBR 1.0倍以下」のように**複数の条件を組み合わせる**ことで、業績が安定しつつ放置されている割安高配当株を絞り込むことができます。</p>
+      <p style="font-size: 0.95rem; color: #334155;">単一の指標だけで判断せず、「配当利回り3%以上 × PER15倍以下 × PBR1.0倍以下」のように複数の条件を組み合わせることで、自分が確認したい条件に合う銘柄を効率よく絞り込むことができます。ただし、検索結果だけで企業の良し悪しを判断するのではなく、絞り込んだ銘柄について業績や財務状況などを確認することが重要です。</p>
     </section>
     
 </main>
@@ -142,7 +140,6 @@
 
 <footer id="footer"></footer>    <!-- フッターリンク -->
 
-
-</body>
     <script src="../css_js/js_screening.js"></script>
+</body>
 </html>
