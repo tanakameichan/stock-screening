@@ -19,18 +19,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="別のシステムで検索したで株価の結果を載せてます">
+          content="株価300円以下の銘柄を、配当利回り、PER、PBR、ROEなどの指標から順位付けした株検索ツール上位版の出力結果です。">
 <!-- OGP設定（SNS・X/Twitterシェア用） -->
-    <meta property="og:site_name" content="高配当株・割安株 スクリーニングデータベース">
-    <meta property="og:title" content="高配当株・割安株 スクリーニングデータベース">
-    <meta property="og:description" content="独自指標で厳選した割安高配当株の一覧。リスク分析や評価理由をわかりやすくまとめています。">
+    <meta property="og:site_name" content="たなかさん家の初心者向け株式スクリーニングツール">
+    <meta property="og:title" content="株検索ツール上位版｜たなかさん家の株式スクリーニングツール">
+    <meta property="og:description" content="株価300円以下の銘柄を条件に基づいて順位付けした、株検索ツール上位版の出力結果です。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tanakameichan.github.io/">
+    <meta property="og:url" content="https://tanakameichan.github.io/stock-screening/table.html">
   
     <!-- Twitter (X) カード -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="高配当株・割安株 スクリーニングデータベース">
-    <meta name="twitter:description" content="独自指標で厳選した割安高配当株の一覧。リスク分析や評価理由をわかりやすくまとめています。">
+    <meta name="twitter:title" content="株検索ツール上位版｜たなかさん家の株式スクリーニングツール">
+    <meta name="twitter:description" content="株価300円以下の銘柄を条件に基づいて順位付けした、株検索ツール上位版の出力結果です。">
 
     <link rel="stylesheet" href="../css_js/style.css" type="text/css">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
@@ -58,9 +58,10 @@
         <li>本記事は投資判断の参考情報を提供するものであり、特定の銘柄の購入を推奨するものではありません。投資判断はご自身の責任で行ってください。</li>
         <li>数値は取得元の更新状況により証券会社の表示と異なる場合があります。投資判断の際は最新情報をご確認ください。</li>
         <li>このツールは銘柄を自動的に選ぶものではなく、自分で調べる前の候補探しを目的としています。</li>
-        <li>表示されている内容は、別のシステムでの結果を載せているだけです、新たに検索はできません。</li>
+        <li>現在表示しているデータは、別システムで抽出・集計した結果です。このページ上で条件を変更して再検索することはできません。</li>
         <li>検索が出来る<a href="./">簡易版</a>を公開しております。</li>
-        <li>株価300円以下で検索し、条件を元に順位をつけ、上位10位まで載せております。</li>
+        <li>株価300円以下を対象に、当時の条件をもとに順位付けした結果を上位10銘柄まで掲載しています。</li>
+        <li>この順位は将来の株価上昇や配当を保証するものではなく、数値条件から候補銘柄を整理するためのものです。</li>
     </ul>
 
 
@@ -94,24 +95,27 @@
 <!-- スクリーニングツールの解説・活用ガイド（AdSense対策・SEO用） -->
 <section class="tool-guide" style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; line-height: 1.8;">
   <h2 style="font-size: 1.4rem; color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 0;">当スクリーニングツールの活用ガイドと指標の見方</h2>
-  <p style="font-size: 0.95rem; color: #334155;">当ツールは、株式市場に上場する銘柄の中から「割安感」と「高い配当利回り」を兼ね備えた銘柄を効率よく探すためのデータベースです。掲載されている主な財務指標の見方と、投資判断における活用ポイントを解説します。</p>
+  <p style="font-size: 0.95rem; color: #334155;">当ツール上位版では、株価300円以下の銘柄を対象に、配当利回り、PER、PBR、ROEなどの指標をもとに順位付けし、上位10銘柄を掲載しています。表示された順位は銘柄を自動的に推奨するものではなく、気になる銘柄をさらに調べるための候補整理を目的としています。</p>
+    <p>上位版では、株価300円以下の銘柄を対象に、配当利回り、PER、PBR、ROEなどの数値をもとに独自の基準でスコアを算出しています。</p>
+    <p>スコアが高い銘柄ほど、設定した数値条件に多く該当する仕組みです。ただし、スコアが高いことが企業の将来性や投資成果を保証するものではありません。</p>
+    <p>例えば、高配当でもROEが低い銘柄や、PERが非常に低いものの一時的な利益によって数値が低くなっている可能性のある銘柄があります。そのため、順位だけで判断せず、決算内容、業績推移、配当の推移、財務状況などを確認することをおすすめします。</p>
 
   <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. 配当利回り（%）</h3>
   <p style="font-size: 0.95rem; color: #334155;">1株あたりの年間予想配当金を、現在の株価で割って算出される指標です。数値が高いほど、投資額に対して多くの配当を受け取ることができます。</p>
   <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-    <li><strong>活用の視点:</strong> 一般的に3.5%〜4.0%以上が高配当銘柄の目安とされます。ただし、業績悪化によって株価が急落した結果、一時的に利回りが高く見えている「配当トラップ」には注意が必要です。配当性向や過去の増配傾向も合わせて確認することが重要です。</li>
+    <li><strong>活用の視点:</strong>配当利回りが高い銘柄を探す際の参考になります。ただし、業績悪化によって株価が下落した結果、一時的に利回りが高く見えている場合もあります。配当性向や過去の配当推移、業績なども合わせて確認することが重要です。</li>
   </ul>
 
   <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. PER（株価収益率）</h3>
   <p style="font-size: 0.95rem; color: #334155;">現在の株価が「1株あたりの純利益（EPS）」の何倍まで買われているかを示す指標です。企業の「稼ぐ力」に対して株価が割安か割高かを測ります。</p>
   <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-    <li><strong>活用の視点:</strong> 日本市場の全銘柄平均はおよそ15倍前後が目安となります。15倍を下回る銘柄は割安と判断されますが、成長性が低い業種では慢性的にPERが低く放置されるケースもあるため、同業他社との比較が有効です。</li>
+    <li><strong>活用の視点:</strong>PERは同業他社や過去の水準などと比較して見ることが重要です。PERが低い場合でも、業績の先行きなどが理由になっていることがあります。</li>
   </ul>
 
   <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. PBR（株価純資産倍率）</h3>
   <p style="font-size: 0.95rem; color: #334155;">現在の株価が「1株あたりの純資産（BPS）」の何倍かを示す指標です。会社が解散した場合に株主に残る価値（解散価値）に対して、株価がどう評価されているかを表します。</p>
   <ul style="font-size: 0.95rem; color: #334155; padding-left: 1.2rem;">
-    <li><strong>活用の視点:</strong> PBR 1.0倍が解散価値と同等とされ、1.0倍を割れると底値圏（割安）とみなされます。近年は東京証券取引所による「PBR1倍割れ改善要請」もあり、自社株買いや増配などの株主還元姿勢を強める企業が増加しています。</li>
+    <li><strong>活用の視点:</strong>PBRが1.0倍を下回っている場合、株価が純資産に対して低く評価されている可能性があります。ただし、PBRだけで割安・割高を判断することはできないため、収益性や財務状況なども確認する必要があります。</li>
   </ul>
 
 </section>
